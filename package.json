@@ -1,0 +1,15 @@
+{
+  "name": "aquiles",
+  "version": "1.0.0",
+  "description": "Aquiles leather goods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"compile:sass": "sass ./sass/main.scss ./css/main.css --watch"
+  },
+  "author": "Caio Nobre",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

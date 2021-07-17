@@ -1,0 +1,36 @@
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+	font-size: 62.5%;
+
+	@media #{$tablet} {
+		& { font-size: 56.2%; }
+	}
+}
+
+body {
+	padding: 0 5rem;
+	background-image: linear-gradient(
+		to right bottom,
+		$primary-color,
+		$primary-color-darken-5
+	);
+
+	@media #{$tablet} {
+		& { padding: 0; }
+	}
+}
+
+a,
+:visited {
+	text-decoration: none;
+	color: white;
+}

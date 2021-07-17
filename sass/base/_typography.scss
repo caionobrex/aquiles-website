@@ -1,0 +1,64 @@
+h1 { font-size: 3.052rem; }
+
+h2 { font-size: 2.441rem; }
+
+h3 { font-size: 1.953rem; }
+
+h4 { font-size: 1.563rem; }
+
+h5 { font-size: 1.25rem; }
+
+p { font-size: 1.4rem; }
+
+.primary-heading {
+	display: block;
+	text-align: center;
+
+	&--title {
+		font-size: 7rem;
+		letter-spacing: 2rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: white;
+		animation: test 1s ease-in-out;
+
+		@media #{$tablet} {
+			& { letter-spacing: 1rem };
+		}
+	}
+
+	&--sub {
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: $grey-lighten-2;
+		animation: test2 1s ease-in-out;
+	}
+}
+
+@keyframes test {
+	0% {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+	75% {
+		transform: translateX(30px);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes test2 {
+	0% {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	75% {
+		transform: translateX(-30px);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

@@ -1,0 +1,159 @@
+.hero-section {
+	position: relative;
+	height: 100vh;
+	background-image: linear-gradient(
+		to right,
+		rgba(darken($primary-color, 80%), 0.7),
+		rgba($primary-color-darken-5, 0.7)
+	),
+	url('../images/aquiles.jpg');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+
+	&__social-medias {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 5rem;
+	}
+
+	&__social-media {
+		display: inline-block;
+		font-size: 2.8rem;
+		
+		&--insta {
+			& a { color: $insta-color; }
+		}
+		&--fb {
+			& a { color: $facebook-color; }
+		}
+		&--yt {
+			& a { color: $youtube-color; }
+		}
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+}
+
+.catalog {
+	padding: 5rem 6rem;
+	background-color: $primary-color-lighten-4;
+
+	&__grid {
+		margin-top: 4rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-row-gap: 3rem;
+		grid-column-gap: 1rem;
+
+		@media #{$medium-only} {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media #{$small-and-down} {
+			grid-template-columns: auto;
+		}
+	}
+
+	@media #{$medium-and-down} {
+		padding: 5rem 2rem;
+	}
+}
+
+.features-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 2rem;
+	grid-row-gap: 3rem;
+	padding: 12rem 6rem;
+
+	@media #{$medium-and-down} {
+		padding: 8rem 2rem;
+	}
+
+	@media #{$small-and-down} {
+		grid-template-columns: 1fr;
+	}
+}
+
+.about {
+	display: flex;
+	align-items: center;
+	background-color: darken($secondary-color, 30%);
+
+	&__img-box {
+		flex: 0 0 50%;
+
+		@media #{$medium-and-down} {
+			flex: 1;
+			width: 100%;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+	}
+
+	&__content {
+		flex: 1;
+		padding: 0 3rem;
+
+		@media #{$medium-and-down} {
+			padding: 5rem 2rem;
+		}
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	&__desc {
+		line-height: 3rem;
+		text-align: justify;
+		color: $grey-lighten-1;
+	}
+
+	&__progress {
+		width: 100%;
+		background-color: $secondary-color;
+		padding: 1rem;
+		text-align: center;
+		color: white;
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-top: 2rem;
+	}
+
+	@media #{$medium-and-down} {
+		flex-direction: column;
+	}
+}
+
+.card {
+	border: 1px solid lighten($primary-color, 15%);
+	padding: 3rem 2rem;
+	border-radius: 0.3rem;
+	transition: all 0.2s ease-in-out;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 2rem;
+		color: $grey-darken-5;
+	}
+
+	&__text {
+		color: $grey-darken-4;
+		text-align: center;
+	}
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+}

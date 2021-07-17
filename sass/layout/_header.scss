@@ -1,0 +1,47 @@
+.header {
+	top: 0;
+	left: 0;
+	font-size: 1.6rem;
+	padding: 1rem 7rem 1rem 5rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+
+	&__logo-box {
+		font-size: 3rem;
+		font-weight: 700;
+		width: 50px;
+	}
+
+	&__logo {
+		border-radius: 30px;
+		width: 100%;
+		display: block;
+	}
+
+	&__link-list {
+		display: flex;
+
+		@media #{$small-and-down} { display: none; }
+	}
+
+	&__link {
+		font-weight: 600;
+		transition: 0.4s;
+		color: $grey-lighten-4;
+
+		&:not(last-child) { padding-right: 3rem; }
+
+		&:hover { color: $primary-color; }
+	}
+
+	&__menu-icon {
+		display: none !important;
+
+		@media #{$small-and-down} { display: block !important; }
+	}
+
+	@media #{$medium-and-down} { padding: 1rem 2rem 1rem 2rem; }
+}
